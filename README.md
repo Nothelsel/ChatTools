@@ -3,8 +3,9 @@
 This is a simple web extension that allows you to easily hide or show your conversation history on chatGPT.
 # Installation
 
-    - ![Firefox](https://addons.mozilla.org/fr/firefox/addon/chattools/)
-    - Chrome : (soon)
+   [Firefox extension](https://addons.mozilla.org/fr/firefox/addon/chattools/)
+   
+   Chrome : (soon)
 
 # Usage
 
