@@ -1,10 +1,10 @@
 let stateBlur = false;
-let historic = document.querySelector(
+let history = document.querySelector(
     "div.flex-col.flex-1.overflow-y-auto.border-b.border-white\\/20.-mr-2"
 );
 let nav = document.querySelector("nav");
 let body = document.querySelector("body");
-const historicButton = document.createElement("a");
+const historyButton = document.createElement("a");
 const deleteAllButton = document.createElement("a");
 let blocksChat = document.querySelector(
     ".flex.flex-col.items-center.text-sm.dark\\:bg-gray-800"
@@ -12,7 +12,7 @@ let blocksChat = document.querySelector(
 const observerOptions = { childList: true, subtree: true };
 let reload = false;
 
-let historicIcon = (title, hide) => {
+let historyIcon = (title, hide) => {
     return `
     <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 6c-3.182 0-6.182 2.141-8.571 6c2.389 3.859 5.389 6 8.571 6c3.182 0 6.182-2.141 8.571-6C18.182 8.141 15.182 6 12 6z"></path>
@@ -31,8 +31,8 @@ let expandsIcon = (title, hide) => {
    ${title}`;
 }
 
-function loadHistoric() {
-    historic = document.querySelector(
+function loadhistory() {
+    history = document.querySelector(
         "div.flex-col.flex-1.overflow-y-auto.border-b.border-white\\/20.-mr-2"
     );
 }
@@ -87,15 +87,15 @@ const callbackReload = function (mutationsList, observer) {
 const observer = new MutationObserver(callback);
 
 function processHider() {
-    if (!historic) {
-        loadHistoric();
+    if (!history) {
+        loadhistory();
     }
     if (!stateBlur) {
-        historic.style.filter = "blur(5px)";
-        historicButton.innerHTML = historicIcon("Show historic", false);
+        history.style.filter = "blur(5px)";
+        historyButton.innerHTML = historyIcon("Show history", false);
     } else {
-        historic.style.filter = "none";
-        historicButton.innerHTML = historicIcon("Hide historic", true);
+        history.style.filter = "none";
+        historyButton.innerHTML = historyIcon("Hide history", true);
     }
     stateBlur = !stateBlur;
     reload = false;
@@ -127,16 +127,16 @@ function init(reload = false) {
     loadBlocks();
     loadNav();
     loadBody();
-    loadHistoric();
+    loadhistory();
 
-    historicButton.setAttribute(
+    historyButton.setAttribute(
         "class",
         "flex py-3 px-3 items-center gap-3 rounded-md hover:bg-gray-500/10 transition-colors duration-200 text-white cursor-pointer text-sm"
     );
-    historicButton.innerHTML = expandsIcon("Show historic", false);
-    historicButton.addEventListener("click", processHider);
+    historyButton.innerHTML = expandsIcon("Show history", false);
+    historyButton.addEventListener("click", processHider);
 
-    nav.appendChild(historicButton);
+    nav.appendChild(historyButton);
 
     setTimeout(() => {
         blocksChat
