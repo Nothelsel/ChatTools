@@ -3,7 +3,7 @@
 This is a simple web extension that allows you to easily hide or show your conversation history, expand or collapse a block chat, on chatGPT.
 # Installation
 
-   [Firefox extensionv 1.0](https://addons.mozilla.org/fr/firefox/addon/chattools/)
+   [Firefox extension v1.0](https://addons.mozilla.org/fr/firefox/addon/chattools/)
    
    [Chrome extension v1.0](https://chrome.google.com/webstore/detail/nckgcgkfgoghbiklepnmppjlencpkffd)
 
