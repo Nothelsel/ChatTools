@@ -5,7 +5,7 @@ let history = document.querySelector(
 let nav = document.querySelector("nav");
 let body = document.querySelector("body");
 const historyButton = document.createElement("a");
-const deleteAllButton = document.createElement("a");
+
 let blocksChat = document.querySelector(
     ".flex.flex-col.items-center.text-sm.dark\\:bg-gray-800"
 );
@@ -133,7 +133,7 @@ function init(reload = false) {
         "class",
         "flex py-3 px-3 items-center gap-3 rounded-md hover:bg-gray-500/10 transition-colors duration-200 text-white cursor-pointer text-sm"
     );
-    historyButton.innerHTML = expandsIcon("Show history", false);
+    historyButton.innerHTML = historyIcon("Show history", false);
     historyButton.addEventListener("click", processHider);
 
     nav.appendChild(historyButton);
