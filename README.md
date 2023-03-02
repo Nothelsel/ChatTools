@@ -3,19 +3,19 @@
 This is a simple web extension that allows you to easily hide or show your conversation history, expand or collapse a block chat, on chatGPT.
 # Installation
 
-   [Firefox extension](https://addons.mozilla.org/fr/firefox/addon/chattools/)
+   [Firefox extensionv 1.0](https://addons.mozilla.org/fr/firefox/addon/chattools/)
    
-   Chrome : (soon)
+   [Chrome extension v1.0](https://chrome.google.com/webstore/detail/nckgcgkfgoghbiklepnmppjlencpkffd)
 
 # Usage
 
-Once installed, you will notice a new button added to your Google Meet interface. Clicking on this button will toggle the visibility of your browsing history.
+Once installed, you will notice a new button added to your ChatGPT interface. Clicking on this button will toggle the visibility of your browsing history.
 
-The button is labeled with "Show historic" when the history is hidden, and "Hide historic" when it's visible. You can also hover over the button to see a tooltip with the same labels.
+The button is labeled with "Show historic" when the history is hidden, and "Hide historic" when it's visible.
 
-By default, the history will be hidden when you first join a meeting. However, you can change this behavior by modifying the setTimeout function call in the init function.
+By default, the history will be hidden when load page ChatGPT.
 
-Now you can expand/collapse block chat individually by simply click on the show/hide icon at the bottom left of the block chat.
+v1.1 - Now you can expand/collapse block chat individually by simply click on the show/hide icon at the bottom left of the block chat.
 
 # Test
 
